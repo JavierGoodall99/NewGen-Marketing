@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Facebook, MessageCircle } from 'lucide-react';
+import { IconBrandWhatsapp } from "@tabler/icons-react";
 
 interface FooterProps {
   onNavigate: (page: 'home' | 'case-studies' | 'privacy-policy' | 'terms-of-service', sectionId?: string) => void;
@@ -75,7 +76,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:bg-electric-blue hover:text-black hover:border-electric-blue transition-all"
                 aria-label="WhatsApp"
               >
-                <MessageCircle size={18} />
+                <IconBrandWhatsapp size={18} />
               </a>
             </div>
           </div>

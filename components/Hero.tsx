@@ -29,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               const el = document.getElementById('contact');
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }} className="w-full sm:w-auto">
-              Start Project <ArrowRight size={18} />
+              Work With Us <ArrowRight size={18} />
             </Button>
             <Button variant="outline" onClick={() => onNavigate('case-studies')} className="w-full sm:w-auto">
               View Our Work
@@ -44,11 +44,11 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           <div className="flex whitespace-nowrap animate-marquee">
             {[...Array(10)].map((_, i) => (
               <span key={i} className="text-black font-display font-black text-3xl md:text-5xl mx-4 md:mx-8 uppercase flex items-center gap-4 md:gap-8">
-                 Strategy <span className="text-white/60">•</span> 
-                 Content <span className="text-white/60">•</span> 
-                 Virality <span className="text-white/60">•</span> 
-                 Growth <span className="text-white/60">•</span>
-                 Community <span className="text-white/60">•</span>
+                Strategy <span className="text-white/60">•</span>
+                Content <span className="text-white/60">•</span>
+                Virality <span className="text-white/60">•</span>
+                Growth <span className="text-white/60">•</span>
+                Community <span className="text-white/60">•</span>
               </span>
             ))}
           </div>
