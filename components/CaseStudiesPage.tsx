@@ -155,7 +155,7 @@ export const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ onBack }) => {
              SEEN ENOUGH?
           </h3>
           <Button onClick={onBack} className="w-full md:w-auto">
-            Start Your Project
+            Work with us
           </Button>
       </div>
     </div>
