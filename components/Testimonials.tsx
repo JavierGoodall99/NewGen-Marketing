@@ -52,57 +52,57 @@ export const Testimonials: React.FC = () => {
         <div className="absolute top-0 right-0 w-16 md:w-32 h-full z-20 bg-gradient-to-l from-deep-black to-transparent pointer-events-none" />
 
         <div className="flex gap-6 md:gap-8 group">
-           {/* First copy of the list */}
-           <div className="flex shrink-0 gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused]" style={{ animationDuration: '30s' }}>
-             {testimonials.map((t) => (
-               <div 
+          {/* First copy of the list */}
+          <div className="flex shrink-0 gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused]" style={{ animationDuration: '30s' }}>
+            {testimonials.map((t) => (
+              <div
                 key={`a-${t.id}`}
                 className="w-[85vw] sm:w-[400px] md:w-[500px] flex-shrink-0 glass-card p-6 md:p-12 rounded-3xl border border-white/5 hover:border-electric-blue/30 transition-all duration-300 group/card"
-               >
-                  <Quote className="text-electric-blue mb-4 md:mb-6 opacity-50 group-hover/card:opacity-100 transition-opacity" size={32} />
-                  <p className="text-lg md:text-2xl font-medium leading-relaxed mb-6 md:mb-8 text-white/90">
-                    "{t.quote}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <img 
-                      src={t.image} 
-                      alt={t.author} 
-                      className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-white/10 group-hover/card:border-electric-blue/50 transition-colors"
-                    />
-                    <div>
-                      <h4 className="font-display font-bold text-base md:text-lg text-white">{t.author}</h4>
-                      <p className="text-white/50 text-xs md:text-sm">{t.role}, {t.company}</p>
-                    </div>
+              >
+                <Quote className="text-electric-blue mb-4 md:mb-6 opacity-50 group-hover/card:opacity-100 transition-opacity" size={32} />
+                <p className="text-lg md:text-2xl font-medium leading-relaxed mb-6 md:mb-8 text-white/90">
+                  "{t.quote}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <img
+                    src={t.image}
+                    alt={t.author}
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-white/10 group-hover/card:border-electric-blue/50 transition-colors"
+                  />
+                  <div>
+                    <h3 className="font-display font-bold text-base md:text-lg text-white">{t.author}</h3>
+                    <p className="text-white/50 text-xs md:text-sm">{t.role}, {t.company}</p>
                   </div>
-               </div>
-             ))}
-           </div>
+                </div>
+              </div>
+            ))}
+          </div>
 
-           {/* Second copy for seamless loop */}
-           <div className="flex shrink-0 gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused]" style={{ animationDuration: '30s' }}>
-             {testimonials.map((t) => (
-               <div 
+          {/* Second copy for seamless loop */}
+          <div className="flex shrink-0 gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused]" style={{ animationDuration: '30s' }}>
+            {testimonials.map((t) => (
+              <div
                 key={`b-${t.id}`}
                 className="w-[85vw] sm:w-[400px] md:w-[500px] flex-shrink-0 glass-card p-6 md:p-12 rounded-3xl border border-white/5 hover:border-electric-blue/30 transition-all duration-300 group/card"
-               >
-                  <Quote className="text-electric-blue mb-4 md:mb-6 opacity-50 group-hover/card:opacity-100 transition-opacity" size={32} />
-                  <p className="text-lg md:text-2xl font-medium leading-relaxed mb-6 md:mb-8 text-white/90">
-                    "{t.quote}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <img 
-                      src={t.image} 
-                      alt={t.author} 
-                      className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-white/10 group-hover/card:border-electric-blue/50 transition-colors"
-                    />
-                    <div>
-                      <h4 className="font-display font-bold text-base md:text-lg text-white">{t.author}</h4>
-                      <p className="text-white/50 text-xs md:text-sm">{t.role}, {t.company}</p>
-                    </div>
+              >
+                <Quote className="text-electric-blue mb-4 md:mb-6 opacity-50 group-hover/card:opacity-100 transition-opacity" size={32} />
+                <p className="text-lg md:text-2xl font-medium leading-relaxed mb-6 md:mb-8 text-white/90">
+                  "{t.quote}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <img
+                    src={t.image}
+                    alt={t.author}
+                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-white/10 group-hover/card:border-electric-blue/50 transition-colors"
+                  />
+                  <div>
+                    <h3 className="font-display font-bold text-base md:text-lg text-white">{t.author}</h3>
+                    <p className="text-white/50 text-xs md:text-sm">{t.role}, {t.company}</p>
                   </div>
-               </div>
-             ))}
-           </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

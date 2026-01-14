@@ -69,11 +69,11 @@ export const Pricing: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto items-start">
           {tiers.map((tier, index) => (
-            <div 
+            <div
               key={tier.name}
               className={`relative p-6 md:p-8 rounded-3xl backdrop-blur-sm border transition-all duration-500 group flex flex-col h-full
-                ${tier.highlight 
-                  ? 'bg-white/5 border-electric-blue shadow-[0_0_50px_rgba(0,240,255,0.15)] z-10 md:scale-110' 
+                ${tier.highlight
+                  ? 'bg-white/5 border-electric-blue shadow-[0_0_50px_rgba(0,240,255,0.15)] z-10 md:scale-110'
                   : 'bg-neutral-900/20 border-white/10 hover:border-white/30 hover:-translate-y-2'
                 }`}
             >
@@ -91,7 +91,7 @@ export const Pricing: React.FC = () => {
                   <span className="text-3xl lg:text-4xl font-display font-bold text-white tracking-tight">
                     {tier.price}
                   </span>
-                  <span className="text-white/40 font-sans text-sm">{tier.period}</span>
+                  <span className="text-white/70 font-sans text-sm">{tier.period}</span>
                 </div>
                 <p className="text-white/60 text-sm mt-4 leading-relaxed min-h-[3rem]">
                   {tier.description}
@@ -114,8 +114,8 @@ export const Pricing: React.FC = () => {
                 </ul>
               </div>
 
-              <Button 
-                variant={tier.highlight ? 'primary' : 'outline'} 
+              <Button
+                variant={tier.highlight ? 'primary' : 'outline'}
                 className="w-full mt-auto"
               >
                 Choose {tier.name.split(' ')[0]}
