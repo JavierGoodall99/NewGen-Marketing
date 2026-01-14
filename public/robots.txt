@@ -1,0 +1,15 @@
+# Robots.txt for NewGen Marketing
+# https://www.robotstxt.org/
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location (update with your actual domain when deployed)
+# Sitemap: https://yourdomain.com/sitemap.xml
+
+# Disallow crawling of development/build files
+Disallow: /node_modules/
+Disallow: /*.config.js$
+Disallow: /*.config.ts$
+Disallow: /*.config.mjs$
