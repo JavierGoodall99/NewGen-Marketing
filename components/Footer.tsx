@@ -1,6 +1,5 @@
 import React from 'react';
-import { Instagram, Facebook, MessageCircle } from 'lucide-react';
-import { IconBrandWhatsapp } from "@tabler/icons-react";
+import { IconBrandWhatsapp, IconBrandFacebook, IconBrandInstagram } from "@tabler/icons-react";
 
 interface FooterProps {
   onNavigate: (page: 'home' | 'case-studies' | 'privacy-policy' | 'terms-of-service', sectionId?: string) => void;
@@ -58,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:bg-electric-blue hover:text-black hover:border-electric-blue transition-all"
                 aria-label="Instagram"
               >
-                <Instagram size={18} />
+                <IconBrandInstagram size={18} />
               </a>
               <a
                 href="https://www.facebook.com/share/1C2aPEHKPS/"
@@ -67,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/70 hover:bg-electric-blue hover:text-black hover:border-electric-blue transition-all"
                 aria-label="Facebook"
               >
-                <Facebook size={18} />
+                <IconBrandFacebook size={18} />
               </a>
               <a
                 href="https://wa.me/263777084934"
