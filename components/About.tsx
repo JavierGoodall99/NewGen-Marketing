@@ -34,12 +34,12 @@ export const About: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 gap-8 md:gap-16 mt-16 pt-10 border-t border-white/10 max-w-2xl mx-auto" role="list" aria-label="Company statistics">
             <div role="listitem">
-              <div className="font-display text-4xl md:text-6xl font-bold text-white mb-2" aria-label="500 million plus impressions">500M+</div>
-              <p className="text-white/70 text-xs md:text-sm uppercase tracking-widest font-mono">Impressions</p>
+              <div className="font-display text-4xl md:text-6xl font-bold text-white mb-2" aria-label="500 million plus impressions">10M+</div>
+              <p className="text-white/70 text-xs md:text-sm uppercase tracking-widest font-mono">Views</p>
             </div>
             <div role="listitem">
-              <div className="font-display text-4xl md:text-6xl font-bold text-white mb-2" aria-label="300 percent average ROI growth">300%</div>
-              <p className="text-white/70 text-xs md:text-sm uppercase tracking-widest font-mono">Avg. ROI Growth</p>
+              <div className="font-display text-4xl md:text-6xl font-bold text-white mb-2" aria-label="300 percent average ROI growth">1000%+</div>
+              <p className="text-white/70 text-xs md:text-sm uppercase tracking-widest font-mono">Engagement</p>
             </div>
           </div>
         </div>

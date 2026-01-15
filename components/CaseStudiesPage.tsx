@@ -38,11 +38,11 @@ const cases: CaseStudyData[] = [
   },
   {
     id: '2',
-    client: 'LGplast',
+    client: 'LG Plast',
     title: 'LG Plast',
     category: 'Strategy & Web Design',
     year: '2024',
-    description: 'LGplast needed a digital transformation to match their industry-leading products. We created a sleek, professional web experience and social presence that positions them as the go-to plastics manufacturer.',
+    description: 'LG Plast needed a digital transformation to match their industry-leading products. We created a sleek, professional web experience and social presence that positions them as the go-to plastics manufacturer.',
     images: [
       '/LGplast/casestudy1.jpg',
       '/LGplast/casestudy2.jpg',
@@ -79,10 +79,10 @@ const cases: CaseStudyData[] = [
   {
     id: '4',
     client: 'Tagonswa',
-    title: 'Tagonswa',
+    title: 'Tagonswa Hardware',
     category: 'Paid Social & Community',
     year: '2024',
-    description: 'Tagonswa came to us with a vision to expand their reach. We built a comprehensive social strategy that connected them with their community while scaling their message to a broader audience.',
+    description: 'Tagonswa Hardware came to us with a vision to expand their reach. We built a comprehensive social strategy that connected them with their community while scaling their message to a broader audience.',
     images: [
       '/Tagonswa/casestudy1.jpg',
       '/Tagonswa/casestudy2.jpg',
@@ -99,7 +99,7 @@ const cases: CaseStudyData[] = [
   {
     id: '5',
     client: 'TotalEnergies',
-    title: 'TotalEnergies',
+    title: 'Total Energies',
     category: 'Strategy & Branding',
     year: '2024',
     description: 'We partnered with TotalEnergies to amplify their sustainability message and brand presence across digital platforms. Our campaigns highlighted their commitment to a greener future while driving unprecedented engagement.',
