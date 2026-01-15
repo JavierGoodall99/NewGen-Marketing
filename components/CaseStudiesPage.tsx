@@ -7,7 +7,6 @@ interface CaseStudyData {
   client: string;
   title: string;
   category: string;
-  year: string;
   description: string;
   images: string[];
   stats: { label: string; value: string }[];
@@ -19,7 +18,6 @@ const cases: CaseStudyData[] = [
     client: 'Kreckle',
     title: 'Kreckle Foods',
     category: 'Paid Social & Branding',
-    year: '2024',
     description: 'We helped Kreckle establish a powerful digital presence through strategic social media campaigns and cohesive branding. Our high-impact visuals and targeted ads drove massive engagement and brand recognition.',
     images: [
       '/Kreckle/casestudy1.jpg',
@@ -41,7 +39,6 @@ const cases: CaseStudyData[] = [
     client: 'LG Plast',
     title: 'LG Plast',
     category: 'Strategy & Web Design',
-    year: '2024',
     description: 'LG Plast needed a digital transformation to match their industry-leading products. We created a sleek, professional web experience and social presence that positions them as the go-to plastics manufacturer.',
     images: [
       '/LGplast/casestudy1.jpg',
@@ -61,7 +58,6 @@ const cases: CaseStudyData[] = [
     client: 'RKtech',
     title: 'RKtech',
     category: 'Content Production',
-    year: '2024',
     description: 'We positioned RKtech as innovators in the tech space through compelling content and strategic Meta campaigns. Our approach combined thought leadership with viral-worthy creative that resonated with their audience.',
     images: [
       '/RKtech/casestudy1.jpg',
@@ -81,7 +77,6 @@ const cases: CaseStudyData[] = [
     client: 'Tagonswa',
     title: 'Tagonswa Hardware',
     category: 'Paid Social & Community',
-    year: '2024',
     description: 'Tagonswa Hardware came to us with a vision to expand their reach. We built a comprehensive social strategy that connected them with their community while scaling their message to a broader audience.',
     images: [
       '/Tagonswa/casestudy1.jpg',
@@ -101,7 +96,6 @@ const cases: CaseStudyData[] = [
     client: 'TotalEnergies',
     title: 'Total Energies',
     category: 'Strategy & Branding',
-    year: '2024',
     description: 'We partnered with TotalEnergies to amplify their sustainability message and brand presence across digital platforms. Our campaigns highlighted their commitment to a greener future while driving unprecedented engagement.',
     images: [
       '/TotalEnergies/casestudy1.jpg',
@@ -122,10 +116,9 @@ const cases: CaseStudyData[] = [
 interface ImageCarouselProps {
   images: string[];
   title: string;
-  year: string;
 }
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, year }) => {
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -269,10 +262,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, title, year }) =>
         </div>
       )}
 
-      {/* Floating Badge */}
-      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20 bg-black/50 backdrop-blur-md px-3 py-1 md:px-4 md:py-2 rounded-full border border-white/10">
-        <span className="text-[10px] md:text-xs font-bold text-white uppercase tracking-widest">{year}</span>
-      </div>
 
       {/* Image Counter */}
       {images.length > 1 && (
@@ -327,7 +316,6 @@ export const CaseStudiesPage: React.FC<CaseStudiesPageProps> = ({ onBack }) => {
               <ImageCarousel
                 images={project.images}
                 title={project.title}
-                year={project.year}
               />
             </div>
 
