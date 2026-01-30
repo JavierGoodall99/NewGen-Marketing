@@ -1,5 +1,5 @@
-import React from 'react';
-import { Quote } from 'lucide-react';
+import React, { useState } from 'react';
+import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Testimonial } from '../types';
 
 const testimonials: Testimonial[] = [
@@ -34,73 +34,109 @@ const testimonials: Testimonial[] = [
     company: 'Ace of Shawarma',
     quote: "NewGen Marketing taught me the importance of social media marketing. Through them, and public opinion, I was able to better my business. I learnt a long term marketing strategy I can use for my business.",
     image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200'
+  },
+  {
+    id: '5',
+    author: 'Tagonswa',
+    role: 'Board of Directors',
+    company: 'LG Plast',
+    quote: "We've really enjoyed working with NewGen Marketing. They're flexible, easy to deal with, and the whole process has been fun and straightforward. The quality of their images and videos is excellent, and the content has helped attract customers and send real inquiries directly to our sales team.",
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=200&h=200'
   }
 ];
 
 export const Testimonials: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const next = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prev = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const current = testimonials[currentIndex];
+
   return (
     <section className="py-20 md:py-32 bg-deep-black relative overflow-hidden">
-      <div className="container mx-auto px-6 mb-12 md:mb-20 relative z-10">
-        <h2 className="font-display text-4xl md:text-7xl font-bold uppercase mb-4 md:mb-6 text-center">
-          Client <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-teal-400">Obsession</span>
+      <div className="container mx-auto px-6 relative z-10">
+        <h2 className="font-display text-4xl md:text-7xl font-bold uppercase mb-20 text-center">
+          What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-teal-400">Clients Say</span>
         </h2>
-      </div>
 
-      <div className="relative w-full overflow-hidden">
-        {/* Gradient Masks for edges to create fade effect */}
-        <div className="absolute top-0 left-0 w-16 md:w-32 h-full z-20 bg-gradient-to-r from-deep-black to-transparent pointer-events-none" />
-        <div className="absolute top-0 right-0 w-16 md:w-32 h-full z-20 bg-gradient-to-l from-deep-black to-transparent pointer-events-none" />
+        <div className="max-w-6xl mx-auto relative px-4 md:px-20">
+          
+          {/* Navigation Buttons - Absolute positioning outside content */}
+          <button 
+            onClick={prev}
+            className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 p-4 rounded-full bg-white/5 hover:bg-white/10 text-white/50 hover:text-electric-blue transition-all backdrop-blur-sm group z-20"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft size={40} className="group-hover:-translate-x-1 transition-transform" />
+          </button>
+          
+          <button 
+            onClick={next}
+            className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 p-4 rounded-full bg-white/5 hover:bg-white/10 text-white/50 hover:text-electric-blue transition-all backdrop-blur-sm group z-20"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight size={40} className="group-hover:translate-x-1 transition-transform" />
+          </button>
 
-        <div className="flex gap-6 md:gap-8 group">
-          {/* First copy of the list */}
-          <div className="flex shrink-0 gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused]" style={{ animationDuration: '30s' }}>
-            {testimonials.map((t) => (
-              <div
-                key={`a-${t.id}`}
-                className="w-[85vw] sm:w-[400px] md:w-[500px] flex-shrink-0 glass-card p-6 md:p-12 rounded-3xl border border-white/5 hover:border-electric-blue/30 transition-all duration-300 group/card"
-              >
-                <Quote className="text-electric-blue mb-4 md:mb-6 opacity-50 group-hover/card:opacity-100 transition-opacity" size={32} />
-                <p className="text-lg md:text-2xl font-medium leading-relaxed mb-6 md:mb-8 text-white/90">
-                  "{t.quote}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <img
-                    src={t.image}
-                    alt={t.author}
-                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-white/10 group-hover/card:border-electric-blue/50 transition-colors"
-                  />
-                  <div>
-                    <h3 className="font-display font-bold text-base md:text-lg text-white">{t.author}</h3>
-                    <p className="text-white/50 text-xs md:text-sm">{t.role}, {t.company}</p>
-                  </div>
-                </div>
+          {/* Testimonial Content */}
+          <div className="flex flex-col items-center text-center" key={currentIndex}>
+            
+            {/* Image */}
+            <div className="mb-6 relative animate-fade-in-up">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full p-1 bg-gradient-to-br from-electric-blue to-teal-400 mx-auto relative z-10">
+                <img
+                  src={current.image}
+                  alt={current.author}
+                  className="w-full h-full rounded-full object-cover border-2 border-black"
+                />
               </div>
-            ))}
+            </div>
+            
+            {/* Quote */}
+            <div className="max-w-4xl mx-auto mb-8 min-h-[300px] md:min-h-[200px] flex items-center justify-center">
+              <p className="text-lg md:text-2xl md:leading-relaxed font-medium text-white font-display">
+                "{current.quote}"
+              </p>
+            </div>
+            
+            {/* Author Info */}
+            <div className="bg-white/5 px-6 py-3 rounded-full border border-white/10 backdrop-blur-sm">
+              <h3 className="font-display font-bold text-base md:text-lg text-white mb-0.5">{current.author}</h3>
+              <p className="text-electric-blue font-mono text-xs tracking-widest uppercase">
+                {current.role}, {current.company}
+              </p>
+            </div>
           </div>
 
-          {/* Second copy for seamless loop */}
-          <div className="flex shrink-0 gap-6 md:gap-8 animate-marquee group-hover:[animation-play-state:paused]" style={{ animationDuration: '30s' }}>
-            {testimonials.map((t) => (
-              <div
-                key={`b-${t.id}`}
-                className="w-[85vw] sm:w-[400px] md:w-[500px] flex-shrink-0 glass-card p-6 md:p-12 rounded-3xl border border-white/5 hover:border-electric-blue/30 transition-all duration-300 group/card"
-              >
-                <Quote className="text-electric-blue mb-4 md:mb-6 opacity-50 group-hover/card:opacity-100 transition-opacity" size={32} />
-                <p className="text-lg md:text-2xl font-medium leading-relaxed mb-6 md:mb-8 text-white/90">
-                  "{t.quote}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <img
-                    src={t.image}
-                    alt={t.author}
-                    className="w-12 h-12 md:w-16 md:h-16 rounded-full object-cover border-2 border-white/10 group-hover/card:border-electric-blue/50 transition-colors"
-                  />
-                  <div>
-                    <h3 className="font-display font-bold text-base md:text-lg text-white">{t.author}</h3>
-                    <p className="text-white/50 text-xs md:text-sm">{t.role}, {t.company}</p>
-                  </div>
-                </div>
-              </div>
+          {/* Mobile Navigation */}
+          <div className="flex justify-center gap-6 mt-12 md:hidden">
+            <button onClick={prev} className="p-3 rounded-full bg-white/10 text-white">
+              <ChevronLeft size={24} />
+            </button>
+            <button onClick={next} className="p-3 rounded-full bg-white/10 text-white">
+              <ChevronRight size={24} />
+            </button>
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="flex justify-center gap-3 mt-16">
+            {testimonials.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`h-1.5 rounded-full transition-all duration-500 ${
+                  idx === currentIndex 
+                    ? 'w-12 bg-gradient-to-r from-electric-blue to-teal-400 shadow-[0_0_15px_rgba(0,240,255,0.5)]' 
+                    : 'w-2 bg-white/10 hover:bg-white/30'
+                }`}
+                aria-label={`Go to testimonial ${idx + 1}`}
+              />
             ))}
           </div>
         </div>

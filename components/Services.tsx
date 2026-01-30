@@ -1,37 +1,37 @@
 import React from 'react';
-import { Zap, Globe, TrendingUp, Camera, Palette, Cpu } from 'lucide-react';
+import { Zap, Globe, TrendingUp, Camera, Palette, Users } from 'lucide-react';
 import { Service } from '../types';
 
 const services: Service[] = [
   {
     id: '1',
-    title: 'Social Media Management',
+    title: 'Social Media Page Creation & Management',
     icon: 'globe'
   },
   {
     id: '2',
-    title: 'Paid Ad Campaigns & Optimization',
-    icon: 'zap'
+    title: 'Lead Generation for Your Sales Teams',
+    icon: 'users'
   },
   {
     id: '3',
-    title: 'Visual Branding & Graphic Design',
+    title: 'Professional Graphic Design & Content Creation',
     icon: 'palette'
   },
   {
     id: '4',
-    title: 'Video Editing & Short-Form Content',
+    title: 'Professional Photography & Videography',
     icon: 'camera'
   },
   {
     id: '5',
-    title: 'AI-Driven Content Strategy',
-    icon: 'cpu'
+    title: 'Brand Strategy & Market Positioning',
+    icon: 'trend'
   },
   {
     id: '6',
-    title: 'Analytics & Growth Reporting',
-    icon: 'trend'
+    title: 'Sales-Driven Paid Advertising',
+    icon: 'zap'
   }
 ];
 
@@ -41,7 +41,7 @@ const IconMap = {
   globe: Globe,
   zap: Zap,
   palette: Palette,
-  cpu: Cpu
+  users: Users
 };
 
 export const Services: React.FC = () => {

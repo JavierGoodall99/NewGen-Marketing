@@ -18,10 +18,10 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mt-10">
-          <h1 className="font-display text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.95] md:leading-[0.9] tracking-tighter mb-8 md:mb-12 animate-fade-in opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
-            WE MAKE BRANDS <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">IMPOSSIBLE</span> <br />
-            <span className="italic font-serif text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-teal-400">TO IGNORE.</span>
+          <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] md:leading-[0.9] tracking-tighter mb-8 md:mb-12 animate-fade-in opacity-0 [animation-delay:200ms] [animation-fill-mode:forwards]">
+            WE TURN YOUR <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/50">SOCIAL MEDIA</span> <br />
+            <span className="italic font-serif text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-teal-400">INTO A CUSTOMER-GENERATING MACHINE.</span>
           </h1>
 
           <div className="flex flex-col sm:flex-row gap-4 md:gap-6 animate-fade-in opacity-0 [animation-delay:600ms] [animation-fill-mode:forwards]">
@@ -44,11 +44,9 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           <div className="flex whitespace-nowrap animate-marquee">
             {[...Array(10)].map((_, i) => (
               <span key={i} className="text-black font-display font-black text-3xl md:text-5xl mx-4 md:mx-8 uppercase flex items-center gap-4 md:gap-8">
-                Strategy <span className="text-white/60">•</span>
-                Content <span className="text-white/60">•</span>
-                Virality <span className="text-white/60">•</span>
-                Growth <span className="text-white/60">•</span>
-                Community <span className="text-white/60">•</span>
+                Attention <span className="text-white/60">•</span>
+                Engagement <span className="text-white/60">•</span>
+                Sales <span className="text-white/60">•</span>
               </span>
             ))}
           </div>

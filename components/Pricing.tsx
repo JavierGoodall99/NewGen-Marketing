@@ -5,51 +5,36 @@ import { Button } from './Button';
 export const Pricing: React.FC = () => {
   const tiers = [
     {
-      name: 'Starter Package',
-      price: '$250–300',
-      period: '/ month',
-      description: 'Perfect for startups and small businesses getting serious about their online presence.',
+      name: 'Business Growth Partnership',
+      description: 'For businesses that want their social media to look credible and intentional. We take responsibility for giving your brand a clear social media direction and a professional, consistent presence.',
       features: [
-        { title: 'Social Media Page Management', desc: 'Facebook, Instagram, and other key platforms' },
-        { title: 'Ad Account Setup', desc: 'Professional setup and configuration' },
-        { title: 'Foundational Branding', desc: 'Logos, bios, highlights, and brand consistency' },
-        { title: 'Regular Content Posts', desc: 'On-brand content creation and scheduling' },
-        { title: 'Basic Graphic Design & Editing', desc: 'Professional visuals for your content' },
-        { title: '1x Professional Photoshoot', desc: 'High-quality images for your brand' },
-        { title: 'Monthly Check-ins', desc: 'Growth strategy and performance reviews' },
+        { title: 'Consistent Market Visibility', desc: 'Reach approximately 20,000 – 70,000 people per month across Zimbabwe' },
+        { title: 'Strategic Foundation', desc: 'We establish a clear social media strategy to communicate your business messages' },
+        { title: 'Professional Page Management', desc: 'Your social media is shaped to reflect a serious, trustworthy business' },
+        { title: 'Audience Alignment', desc: 'Your content is positioned in front of people relevant to your business, not just anyone' },
       ],
       highlight: false
     },
     {
-      name: 'Stand-Out Package',
-      price: '$400–750',
-      period: '/ month',
-      description: 'For brands ready to scale, with more firepower behind every post and ad.',
+      name: 'Market Domination Partnership',
+      description: 'For businesses that want to dominate attention in their space',
       features: [
-        { title: 'Everything in Starter', desc: 'All features from the Starter package included' },
-        { title: 'Advanced Content Strategy', desc: 'Strategic planning for maximum engagement' },
-        { title: 'Weekly Progress Updates', desc: 'Regular performance reports and insights' },
-        { title: 'Upgraded Design & Animations', desc: 'Premium graphics and animated content' },
-        { title: 'Multi-Platform Management', desc: 'Facebook, Instagram, LinkedIn, and more' },
-        { title: 'Targeted Ad Campaigns', desc: 'Initial optimization and audience targeting' },
-        { title: 'Priority Support', desc: 'Faster response times and dedicated assistance' },
+        { title: 'Nationwide Market Penetration', desc: 'Your brand reaches 150,000 - 500,000 people per month across Zimbabwe' },
+        { title: 'Premium Content Creation', desc: 'Content is created to the highest standard so your brand looks professional, premium, and credible' },
+        { title: 'Customer Acquisition Focus', desc: 'Social media is structured to attract potential customers, not just followers' },
+        { title: 'Enquiry Path Creation', desc: 'Your page is intentionally shaped to move viewers toward messaging, enquiries, and conversations' },
+        { title: 'Performance-Based Optimisation', desc: 'Decisions are refined based on what drives real responses' },
       ],
       highlight: true
     },
     {
-      name: 'Domination Package',
-      price: '$1,100–2,000',
-      period: '/ month',
-      description: 'For businesses ready to own the space. This is high-impact, full-funnel marketing.',
+      name: 'Stand Alone Partnership',
+      description: 'For businesses that want to dominate their entire market',
       features: [
-        { title: 'Elite-Level Branding & Positioning', desc: 'Premium brand strategy and market positioning' },
-        { title: 'Premium Social Media Design', desc: 'Professional page design and ad account setup' },
-        { title: 'Conversion-Optimized Campaigns', desc: 'A/B testing and performance optimization' },
-        { title: 'Sales Funnel Design & Retargeting', desc: 'Complete funnel strategy with ad retargeting' },
-        { title: 'Monthly Marketing Plan', desc: 'Tailored strategy aligned with your goals' },
-        { title: 'Bi-weekly Strategy Calls', desc: 'Regular strategy sessions and planning' },
-        { title: 'Dedicated Campaign Manager', desc: 'Personal account manager for your campaigns' },
-        { title: 'Full Analytics & Performance', desc: 'Comprehensive reporting and breakdowns' },
+        { title: 'Market-Wide Visibility', desc: 'Your brand reaches 1,000,000 – 3,000,000 people per month across Zimbabwe, creating unavoidable presence' },
+        { title: 'Industry Ownership', desc: 'We shape your messaging so your business becomes the obvious choice within your category' },
+        { title: 'Competitive Saturation', desc: 'Your brand is placed consistently in front of your market, making competitors feel invisible by comparison' },
+        { title: 'High-Impact Creative Direction', desc: 'All creative decisions are guided to command attention, authority, and memorability at scale' },
       ],
       highlight: false
     }
@@ -63,7 +48,7 @@ export const Pricing: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12 md:mb-20">
           <h2 className="font-display text-4xl md:text-7xl font-bold uppercase mb-4 md:mb-6">
-            Invest in <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-teal-400">Impact</span>
+            Choose your level of <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-teal-400">growth</span>
           </h2>
         </div>
 
@@ -84,15 +69,9 @@ export const Pricing: React.FC = () => {
               )}
 
               <div className="mb-6 md:mb-8 text-center md:text-left">
-                <h3 className={`font-display text-lg md:text-xl uppercase tracking-widest font-bold mb-4 ${tier.highlight ? 'text-electric-blue' : 'text-white/50'}`}>
+                <h3 className={`font-display text-xl md:text-2xl uppercase tracking-widest font-bold mb-4 ${tier.highlight ? 'text-electric-blue' : 'text-white/50'}`}>
                   {tier.name}
                 </h3>
-                <div className="flex flex-col xl:flex-row xl:items-baseline gap-1">
-                  <span className="text-3xl lg:text-4xl font-display font-bold text-white tracking-tight">
-                    {tier.price}
-                  </span>
-                  <span className="text-white/70 font-sans text-sm">{tier.period}</span>
-                </div>
                 <p className="text-white/60 text-sm mt-4 leading-relaxed min-h-[3rem]">
                   {tier.description}
                 </p>
@@ -115,10 +94,15 @@ export const Pricing: React.FC = () => {
               </div>
 
               <Button
+                onClick={() => {
+                  const message = `I'm interested in the ${tier.name}`;
+                  const encodedMessage = encodeURIComponent(message);
+                  window.open(`https://wa.me/263777084934?text=${encodedMessage}`, '_blank');
+                }}
                 variant={tier.highlight ? 'primary' : 'outline'}
                 className="w-full mt-auto"
               >
-                Choose {tier.name.split(' ')[0]}
+                Get Started
               </Button>
             </div>
           ))}

@@ -12,22 +12,22 @@ export const About: React.FC = () => {
           {/* Label */}
           <div className="flex items-center justify-center gap-2 mb-8">
             <div className="w-8 md:w-12 h-[1px] bg-electric-blue shadow-[0_0_10px_#00F0FF]"></div>
-            <span className="text-electric-blue font-mono text-xs md:text-sm tracking-[0.2em] uppercase">Who We Are</span>
+            <span className="text-electric-blue font-mono text-xs md:text-sm tracking-[0.2em] uppercase">Why Choose Us</span>
             <div className="w-8 md:w-12 h-[1px] bg-electric-blue shadow-[0_0_10px_#00F0FF]"></div>
           </div>
 
           {/* Headline */}
           <h2 className="font-display text-4xl md:text-7xl font-bold leading-[0.95] mb-10 tracking-tight">
-            We turn <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">noise</span> into <span className="italic font-serif text-electric-blue">narrative.</span>
+            Most Marketing <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">Looks Good.</span> <span className="italic font-serif text-electric-blue">Very Little Works.</span>
           </h2>
 
           {/* Body Copy */}
           <div className="max-w-3xl mx-auto space-y-8 text-white/60 text-lg md:text-xl leading-relaxed font-light">
             <p>
-              NewGen Marketing isn't just another agency. We are a collective of digital natives, strategists, and creative rebels who understand that in the attention economy, <strong className="text-white font-medium">being boring is the only sin.</strong>
+              Most marketing today is designed to look impressive, not to deliver results for the business behind it. It attracts attention, but without a clear path to action, <strong className="text-white font-medium">that attention rarely turns into enquiries, customers, or revenue</strong> - leaving businesses visible, but stagnant.
             </p>
             <p>
-              We bridge the gap between creative chaos and strategic precision. From <strong className="text-white">Facebook campaigns that dominate the feed</strong> to full-funnel acquisition strategies that break revenue records, we engineer digital ecosystems that force algorithms to pay attention.
+              At NewGen Marketing, your social media is built to deliver results. Every campaign, post, and decision is geared toward <strong className="text-white">generating enquiries, attracting the right customers, and driving real sales.</strong> We measure success by what matters to your business - growth, demand, and revenue - not vanity metrics.
             </p>
           </div>
 

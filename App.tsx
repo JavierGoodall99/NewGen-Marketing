@@ -59,11 +59,11 @@ function App() {
             {/* Call to Action Section */}
             <section id="contact" className="py-32 bg-gradient-to-r from-cyan-400 to-blue-600 text-black relative overflow-hidden">
               <div className="container mx-auto px-6 text-center relative z-10">
-                <h2 className="font-display text-5xl md:text-8xl font-black mb-8 tracking-tighter">
-                  READY TO <br/> GET CUSTOMERS?
+                <h2 className="font-display text-6xl md:text-8xl font-black mb-8 tracking-tighter">
+                  READY TO <br/> OUTPERFORM YOUR <br/> COMPETITORS?
                 </h2>
                 <p className="text-xl md:text-2xl font-sans mb-12 max-w-2xl mx-auto font-medium opacity-90">
-                  Stop posting into the void. Let's build a strategy that actually converts.
+                  If customers are the goal, choose an agency that knows how to get them.
                 </p>
                 <a 
                   href="https://wa.me/263777084934"
